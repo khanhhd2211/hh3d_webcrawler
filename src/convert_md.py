@@ -13,8 +13,8 @@ with open('video_src.json', 'r') as video:
 			link = videos[video_key]
 			video_src = ''
 
-		hh3d_link = f'[HH3D_Link]({link})' if len(link) != 0 else ''
-		hh3d_video_src = f'[HH3D_Source]({video_src})' if len(video_src) != 0 else ''
+		hh3d_link = f'<a href="{link}" target="_blank">HH3D_Link</a>' if len(link) != 0 else ''
+		hh3d_video_src = f'<a href="{video_src}" target="_blank">HH3D_Source</a>' if len(video_src) != 0 else ''
 
 		if 'blob' in video_src:
 			hh3d_video_src = f'**BLOB_LINK** {hh3d_video_src}'			
